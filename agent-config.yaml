@@ -1,0 +1,135 @@
+# 致秀小程序 - Agent角色配置
+agents:
+  pm-agent:
+    model: claude-sonnet-4-20250514
+    skills:
+      - prd_decomposition
+      - acceptance_criteria
+      - priority_management
+      - cross_agent_sync
+    tools:
+      - notion-mcp
+      - linear-mcp
+      - github-mcp
+    status: configured
+
+  architect-agent:
+    model: claude-opus-4-20250115
+    skills:
+      - database_design
+      - api_design
+      - architecture_doc
+      - code_standards
+      - consistency_check
+    tools:
+      - prisma-cli
+      - swagger-generator
+      - github-mcp
+    status: configured
+
+  design-agent:
+    model: gpt-4o-2024-11-20
+    skills:
+      - wireframe_design
+      - visual_design
+      - component_spec
+      - image_generation
+      - style_guide
+    tools:
+      - figma-mcp
+      - dall-e-api
+      - weui-reference
+    status: pending_api_keys
+
+  frontend-agent:
+    model: claude-sonnet-4-20250514
+    skills:
+      - miniprogram_dev
+      - react_admin_dev
+      - component_dev
+      - unit_testing
+      - responsive_layout
+    tools:
+      - wechat-devtools
+      - npm
+      - github-mcp
+      - wechat-miniprogram-mcp
+    status: configured
+
+  backend-agent:
+    model: claude-sonnet-4-20250514
+    skills:
+      - nestjs_dev
+      - prisma_orm
+      - business_logic
+      - api_testing
+      - wechat_pay_integration
+      - wechat_auth
+    tools:
+      - prisma-cli
+      - jest
+      - nest-cli
+      - github-mcp
+      - database-mcp
+    status: configured
+
+  test-agent:
+    model: claude-sonnet-4-20250514
+    skills:
+      - unit_testing
+      - integration_testing
+      - e2e_testing
+      - risk_control_testing
+      - regression_testing
+      - coverage_report
+    tools:
+      - jest
+      - supertest
+      - prisma-test
+      - github-mcp
+    status: configured
+
+  devops-agent:
+    model: claude-haiku-4-20250414
+    skills:
+      - docker_build
+      - ci_cd_config
+      - env_management
+      - monitoring_setup
+      - log_management
+    tools:
+      - docker
+      - github-actions-mcp
+      - tencent-cloud-mcp
+    status: pending_docker
+
+  ops-agent:
+    model: claude-sonnet-4-20250514
+    skills:
+      - product_management
+      - points_shop_management
+      - content_creation
+      - image_design
+      - copywriting
+      - data_analysis
+      - batch_operations
+    tools:
+      - admin-api-mcp
+      - image-gen-api
+      - excel-mcp
+      - cos-mcp
+    status: configured
+
+  review-agent:
+    model: claude-opus-4-20250115
+    skills:
+      - code_review
+      - security_audit
+      - risk_control_audit
+      - performance_review
+      - standards_check
+    tools:
+      - github-mcp
+      - eslint
+      - sonarqube-mcp
+    status: configured

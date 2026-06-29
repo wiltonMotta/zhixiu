@@ -1,0 +1,27 @@
+# 环境配置（包含敏感信息）
+.env
+
+# 数据目录
+data/
+
+# 构建产物
+node_modules/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+
+# 临时文件
+*.tmp
+*.bak

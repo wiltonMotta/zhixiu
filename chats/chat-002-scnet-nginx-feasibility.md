@@ -441,3 +441,53 @@ effective_cache_size = 6GB
 work_mem = 64MB
 max_connections = 200
 ```
+
+---
+
+## Git版本控制配置
+
+### 远程仓库配置
+- **远程仓库地址**: https://github.com/wiltonMotta/zhixiu
+- **SSH地址**: git@github.com:wiltonMotta/zhixiu.git
+- **本地分支**: main
+- **追踪分支**: origin/main
+
+### Git配置详情
+```bash
+# 用户配置
+git config user.email "zhixiu-agent@github.com"
+git config user.name "Zhixiu Agent"
+
+# 提交策略
+git config pull.rebase false  # 使用merge策略
+
+# 远程仓库
+git remote add origin git@github.com:wiltonMotta/zhixiu.git
+```
+
+### 首次提交信息
+- **提交ID**: 3a00528
+- **提交消息**: 🚀 Init: zhixiu multi-brand member mini-program
+- **文件数量**: 16个文件
+- **代码行数**: 4715行
+- **日期**: 2026-06-29
+
+### 文件结构
+```
+zhixiu/
+├── .env.example          # 环境变量模板
+├── .gitignore            # Git忽略配置
+├── CLAUDE.md             # 项目配置
+├── agent-config.yaml     # Agent角色配置
+├── chats/                # 对话记录
+├── docs/                 # 文档
+├── prompt/               # Agent提示词
+├── scripts/              # 服务管理脚本
+└── data/                 # 数据目录（已忽略）
+```
+
+### 注意事项
+- .env文件包含敏感信息，已加入.gitignore
+- data目录包含数据库文件，已加入.gitignore
+- 使用SSH密钥认证，配置在~/.ssh/github_key
+- 通过代理访问GitHub: http://scnkt47u2f:007dbce8@10.1.4.13:3120

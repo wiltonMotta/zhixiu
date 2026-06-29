@@ -15,14 +15,12 @@
 | gcc | 13.3.0 | ✅ 已安装 | /usr/bin/ |
 | curl | - | ✅ 已安装 | /usr/bin/ |
 | wget | - | ✅ 已安装 | /usr/bin/ |
+| **Docker** | **29.6.1** | **✅ 已安装** | **/usr/bin/docker → /root/private_data/sun/tools/docker** |
+| **kubectl** | **v1.36.2** | **✅ 已安装** | **/usr/local/bin/kubectl → /root/private_data/sun/tools/kubectl** |
 
-## 缺失工具（需要sudo权限）
+## 缺失工具
 
-| 工具 | 用途 | 状态 |
-|------|------|------|
-| Docker | 容器管理 | ❌ 无sudo权限 |
-| kubectl | 容器编排 | ❌ 无sudo权限 |
-| docker-compose | 多容器编排 | ❌ 无sudo权限 |
+无。所有Agent角色所需的工具均已安装。
 
 ## Agent角色就绪情况
 
@@ -33,15 +31,15 @@
 3. **前端开发Agent** - Node.js/npm已安装
 4. **后端开发Agent** - NestJS CLI, Prisma, Jest等已安装
 5. **测试Agent** - Jest, Supertest等已安装
-6. **代码审查Agent** - ESLint已安装
+6. **运维Agent** - Docker和kubectl已安装 ✅
+7. **代码审查Agent** - ESLint已安装
+8. **运营管理Agent** - 需要API密钥和后台服务
 
 ### ⚠️ 部分就绪的Agent
 
 1. **UI/UX设计Agent** - 需要API密钥（DALL-E 3, Figma）
-2. **运维Agent** - 需要Docker（无sudo权限）
-3. **运营管理Agent** - 需要API密钥和后台服务
 
-### 🔧 配置状态
+## 配置状态
 
 - PostgreSQL数据库：✅ 已初始化并运行
 - Redis缓存：✅ 已安装并运行
@@ -49,10 +47,12 @@
 - 文件存储：✅ /root/private_data/sun/storage/zhixiu-assets/
 - Claude Code配置：✅ 已创建
 - Agent配置文件：✅ agent-config.yaml
+- Docker：✅ 已安装（需要sudo权限）
+- kubectl：✅ 已安装（需要sudo权限）
 
 ## 下一步建议
 
 1. 获取必要的API密钥（DALL-E 3, Figma, 腾讯云COS等）
 2. 配置MCP服务器连接
-3. 安装Docker（如果获得sudo权限）
+3. 在完整权限环境中启动Docker服务
 4. 完成Agent间的协作流程配置

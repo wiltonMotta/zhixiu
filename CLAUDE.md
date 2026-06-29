@@ -107,3 +107,24 @@
 - Docker (需要sudo权限)
 - kubectl (需要sudo权限)
 - 某些MCP服务器 (需要API密钥)
+
+## 系统工具安装
+
+### 基础设施工具（已安装）
+- Docker 29.6.1: /usr/bin/docker → /root/private_data/sun/tools/docker ✅
+- kubectl v1.36.2: /usr/local/bin/kubectl → /root/private_data/sun/tools/kubectl ✅
+
+### 使用方式
+```bash
+# Docker (需要sudo权限)
+sudo /root/private_data/sun/tools/docker ps
+sudo systemctl start docker  # 在完整权限环境中
+
+# kubectl (需要sudo权限)
+sudo /root/private_data/sun/tools/kubectl version --client
+```
+
+### 注意
+- Docker守护进程在当前环境因网络权限限制无法启动
+- 在具有完整权限的宿主机或虚拟机上可直接使用
+- 二进制文件和全部组件已就绪

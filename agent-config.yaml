@@ -98,10 +98,11 @@ agents:
       - monitoring_setup
       - log_management
     tools:
-      - docker
+      - docker  # ✅ 已安装 v29.6.1
+      - kubectl  # ✅ 已安装 v1.36.2
       - github-actions-mcp
       - tencent-cloud-mcp
-    status: pending_docker
+    status: configured
 
   ops-agent:
     model: claude-sonnet-4-20250514

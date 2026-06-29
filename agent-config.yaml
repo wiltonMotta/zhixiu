@@ -98,8 +98,8 @@ agents:
       - monitoring_setup
       - log_management
     tools:
-      - docker  # ✅ 已安装 v29.6.1
-      - kubectl  # ✅ 已安装 v1.36.2
+      - docker  # ✅ 已安装 v29.6.1 (sunjg用户无sudo)
+      - kubectl  # ✅ 已安装 v1.36.2 (需要sudo)
       - github-actions-mcp
       - tencent-cloud-mcp
     status: configured
@@ -134,3 +134,23 @@ agents:
       - eslint
       - sonarqube-mcp
     status: configured
+
+# 权限配置
+permissions:
+  sunjg-user:
+    groups:
+      - sunjg
+      - sudo
+      - sunjgrp
+      - docker
+    docker-access:
+      direct: true  # 通过docker组直接访问Docker socket
+      sudo: false   # 不需要sudo执行Docker命令
+    sudo-access:
+      full: true    # 拥有sudo权限
+      password-free: false  # 需要密码
+    notes: |
+      - sunjg用户已添加到docker和sudo组
+      - 可无需sudo直接操作Docker（docker ps, docker build等）
+      - 拥有管理员权限，可执行需要root权限的命令
+      - Docker守护进程当前未运行，需要先启动
